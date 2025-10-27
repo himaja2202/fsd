@@ -1,0 +1,29 @@
+7(b)AIM:  b. Write a My SQL queries to create table, and insert the data, update the data in the table
+Step 1: Open MySQL Command Line Client
+•	Login using your password.
+Step 2: Create a Database (if not already created)
+CREATE DATABASE CompanyDB;
+USE CompanyDB;
+Step 3: Create a Table
+CREATE TABLE Employees (
+    emp_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    position VARCHAR(100),
+    salary DECIMAL(10, 2)
+);
+Step 4: Insert Data into the Table
+INSERT INTO Employees (name, position, salary)
+VALUES 
+('Alice Johnson', 'Manager', 60000.00),
+('Bob Smith', 'Developer', 50000.00),
+('Charlie Lee', 'Designer', 45000.00);
+Step 5: View the Table Data
+SELECT * FROM Employees;
+Step 6: Update Data in the Table
+UPDATE Employees
+SET salary = 55000.00
+WHERE name = 'Bob Smith';
+Step 7: View Updated Data
+SELECT * FROM Employees;
+
++--------+---------------+-----------+----------+
