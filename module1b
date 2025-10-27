@@ -1,0 +1,34 @@
+2.: Write a JavaScript program to select the elements in HTML page using selectors.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Selectors Example</title>
+  <style>
+    .highlight {
+      color: blue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="mainTitle">Welcome to My Web Page</h1>
+         <p class="highlight">This is a paragraph with a class.</p>
+          <p>This is a paragraph without a class.</p>
+          <div class="highlight">Another element with class 'highlight'</div>
+         <button onclick="selectElements()">Click to Select Elements</button>
+  <script>
+    function selectElements() {
+      const title = document.getElementById("mainTitle");
+      alert("getElementById: " + title.textContent);
+      const highlights = document.getElementsByClassName("highlight");
+      alert("getElementsByClassName: Found " + highlights.length + " elements.");
+       const paragraphs = document.getElementsByTagName("p");
+      alert("getElementsByTagName: Found " + paragraphs.length + " <p> elements.");
+      const firstHighlight = document.querySelector(".highlight");
+      alert("querySelector: " + firstHighlight.textContent);
+      const allHighlights = document.querySelectorAll(".highlight");
+      alert("querySelectorAll: Found " + allHighlights.length + " elements with class 'highlight'.");
+    }
+  </script>
+</body>
+</html>
