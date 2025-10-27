@@ -1,0 +1,17 @@
+1.Write a JavaScript program to link JavaScript file with the HTML page 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linking JavaScript</title>
+</head>
+<body>
+  <h1>JavaScript Linking Example</h1>
+  <button onclick="showMessage()">Click Me</button>
+  <p id="output"></p>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="1ascript.js"></script>
+
+</body>
+</html>
+
